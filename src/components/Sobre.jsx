@@ -2,9 +2,37 @@ import './Sobre.css'
 import card1 from '../assets/card1.jpeg';
 import card2 from '../assets/card2.jpeg';
 import card3 from '../assets/card3.jpeg';
+//import emailjs from 'emailjs-com';
+import { useState } from 'react';
+
+
+
+
+
 
 
 function Sobre(){
+
+    const [nome, setNome] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [assunto, setAssunto] = useState('');
+
+    
+
+    function handleEmail(e){
+    e.preventDefault();
+
+    if (!nome || !email || !message || !assunto) {
+      alert('Erro ao enviar, preencha todos os campos!');
+      return;
+    }
+    console.log(assunto,email,nome,message)
+    alert("email enviado!")
+
+
+
+}
     return(
             
             <main id='about-container'>
@@ -39,22 +67,31 @@ function Sobre(){
                     </div>
                     </section>
                 <h2 id='title-form'>Envie suas dúvidas, sugestões ou comentários sobre Westeros. Sua voz ecoará pelos Sete Reinos!</h2>
-                <form id='form-contato'>
+                <form onSubmit={handleEmail} id='form-contato'>
                     <div>
                         <label>Nome</label>
-                        <input type="text" />
+                        <input 
+                        type="text" 
+                        onChange={(e) => setNome(e.target.value)}
+                        />
                     </div>
                     <div>
                         <label>Email</label>
-                        <input type="Email" />
+                        <input type="Email"
+                        onChange={(e) => setEmail(e.target.value)} />
+                        
+                        
                     </div>
                      <div>
                         <label>Assunto</label>
-                        <input type="" />
+                        <input type="text"
+                        onChange={(e) => setAssunto(e.target.value)} />
+                        
                     </div>
                     <div>
                         <label>Mensagem</label>
-                        <textarea name="" id=""></textarea>
+                        <textarea 
+                        onChange={(e) => setMessage(e.target.value)}></textarea>
                     </div>
                     <div className="button-sobre">
                         <button variant="light" type="submit">
