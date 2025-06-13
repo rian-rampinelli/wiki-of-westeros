@@ -8,7 +8,7 @@ function NavBar(){
         <header id='header'>
             <div id='header-text'>
                 <GiStoneThrone style={{fontSize:50}} />
-                <p>Wiki of westeros</p>
+                <p id='text-logo'>Wiki of westeros</p>
             </div>
             <nav>
                 <ul id='header-list-links'>

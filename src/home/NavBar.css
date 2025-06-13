@@ -12,6 +12,10 @@
     
     
 }
+
+#text-logo{
+    font-size: 2em;
+}
 #header-text{
     display: flex;
     align-items: center;

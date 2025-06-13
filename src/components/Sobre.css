@@ -1,6 +1,6 @@
 body{
-  background-color: #c9d6e3;
   
+  background-color: rgba(42, 59, 71, 0.7);
   margin: 0;
   padding: 0; 
 }
@@ -11,7 +11,7 @@ body{
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-  background-color:#2a3b47;
+ background-color: #2a3b47;
   border-radius: 10px;
   padding: 40px;
 }
@@ -59,6 +59,9 @@ body{
   
 }
 
+.card-personagem{
+  background-position: top center;
+}
 
 #about-container{
     min-height: 100vh;
@@ -77,6 +80,7 @@ body{
     padding-top: 90px;
     padding-bottom: 20px;
     font-size: 3.6em;
+    color: #c9d6e3;
 }
 
 #about-container h2{
@@ -97,16 +101,14 @@ body{
     line-height: 1.8;            
            
 }
-#title-form{
-    margin-top: 60px;
-}
+
 
 #form-contato{
     margin: 50px;
   padding: 2rem;
   background-color: #2a3b47;
   border-radius: 8px;
-  color: white;
+  
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
   color: #c9d6e3;
 
@@ -167,3 +169,27 @@ body{
 }
 
 
+#link-api{
+  text-decoration: none;
+  color: #81d4fa;
+}
+
+#title-form{
+  font-size: 2em;
+  color: #c9d6e3;
+  margin-top: 75px;
+}
+
+
+main #about-container #citacao {
+  font-size: 2.2em;
+}
+
+main #about-container #citacao #spancitacao {
+  display: block;  
+  margin-top: 4px;    
+  font-style: italic;
+  
+  text-align: center;
+  font-size: 0.5em;   
+}
