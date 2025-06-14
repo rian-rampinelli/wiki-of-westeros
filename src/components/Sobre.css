@@ -11,9 +11,10 @@ body{
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
- background-color: #2a3b47;
+  background-color: #2a3b47;
   border-radius: 10px;
   padding: 40px;
+  margin-top: 30px;
 }
 
 .card {
@@ -30,6 +31,7 @@ body{
   justify-content: center;
   transition: all 0.3s ease;
   
+  
 }
 
 .cards-overlay {
@@ -42,6 +44,7 @@ body{
 .card-info {
   z-index: 1;
   padding: 16px;
+  
   
 }
 
@@ -77,10 +80,10 @@ body{
 
 #about-container h1{
     text-align: center;
-    padding-top: 90px;
+    padding-top: 160px;
     padding-bottom: 20px;
     font-size: 3.6em;
-    color: #c9d6e3;
+  
 }
 
 #about-container h2{
@@ -89,16 +92,17 @@ body{
 }
 
 
-#about-container p {
-    padding-top:25px ;
-    padding-bottom: 40px;
-    font-size: 1.6em;
+#about-container #sobre{
+    padding: 45px 18px 65px 18px;
+    font-size: 1.8em;
     border-radius: 4px;
     text-align: justify;         
     text-indent: 1em;
     max-width: 900px;
     margin: 1.5rem auto;
-    line-height: 1.8;            
+    line-height: 1.6;           
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 10px; 
            
 }
 
@@ -169,20 +173,25 @@ body{
 }
 
 
-#link-api{
+.link-api{
   text-decoration: none;
   color: #81d4fa;
+  
 }
-
+.link-api:hover{
+   border-bottom:solid 0.7px;
+}
 #title-form{
   font-size: 2em;
-  color: #c9d6e3;
+
   margin-top: 75px;
 }
 
 
 main #about-container #citacao {
-  font-size: 2.2em;
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  margin-top: 40px;
 }
 
 main #about-container #citacao #spancitacao {

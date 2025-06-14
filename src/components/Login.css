@@ -1,5 +1,5 @@
 #main-login {
-  background-image: url('../assets/teste.jpg');
+  background-image: url('../assets/got-nf.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,17 +90,23 @@
 }
 
 
-.checkbox {
-  margin-left: 6px;
-  
+.checkbox-personalizado {
+  display: flex;
+ 
+  gap: 2px;
 }
 
-
-.checkbox input{
-  background-color: rgba(200, 200, 200, 0.4);
-  border: none;
+.checkbox-personalizado input {
+  cursor: pointer;
+  accent-color:grey; 
+  height: 16px;;
+  width: 30px;
 }
 
+.checkbox-personalizado label {
+  color: white;
+  cursor: pointer;
+}
 
 .button-login {
   text-align: center;

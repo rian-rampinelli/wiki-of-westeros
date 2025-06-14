@@ -36,7 +36,6 @@ function Login({ onlogin }) {
             <Form.Label className='label'>User</Form.Label>
             <div className="input-group">
               <Form.Control
-              
                 className="input-login"
                 type="text"
                 autoComplete="off"
@@ -64,13 +63,15 @@ function Login({ onlogin }) {
             </div>
           </Form.Group>
 
-          <Form.Group className='checkbox'>
-            <Form.Check
+          <div className="checkbox-personalizado">
+            <input
               type="checkbox"
-              label="Mostrar Senha"
+              id="mostrarSenha"
+              checked={mostrarSenha}
               onChange={(e) => setMostrarSenha(e.target.checked)}
             />
-          </Form.Group>
+            <label htmlFor="mostrarSenha">Mostrar Senha</label>
+          </div>
 
           <div className="button-login">
             <Button variant="light" type="submit">

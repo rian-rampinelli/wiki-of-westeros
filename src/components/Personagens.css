@@ -1,0 +1,109 @@
+#main-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    max-width: 1500px;
+    margin: auto;
+    
+}
+#main-container #title-text{
+    text-align: center;
+    max-width: 1000px;
+    margin-top:80px;
+    font-size: 1.8em;
+    line-height: 1.5;
+    background-color: rgba(0, 0, 0, 0.12);
+    border-radius: 10px;
+
+}
+
+#main-container h1{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+#pesquisa-personagem{
+  background-color: #2a3b47;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  color: #c9d6e3;
+  padding: 14px;
+  margin-bottom: 60px;
+
+}
+
+#pesquisa-personagem p{
+    font-size: 18px;
+}
+#form-pesquisa{
+ padding: 2em;
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  gap: 0.3rem;                   
+ 
+
+
+}
+
+#form-pesquisa label{
+    font-size: 1.3em;
+}
+
+
+#form-pesquisa input{
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid #2a3b47;  
+  width: 400px;
+  color: white;                          
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  padding: 10px 10px; 
+  margin-bottom: 15px;  
+}
+#form-pesquisa button{
+    width: 50%;
+    margin: auto;
+     text-decoration: none;
+    color: white; 
+    border: 2px solid #81d4fa;
+    border-radius: 6px;
+    padding: 5px 20px;
+    font-size: 1.2em;
+    background-color: rgba(129, 212, 250, 0.3); 
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 8px rgba(129, 212, 250, 0.5);
+}
+
+#form-pesquisa button:hover {
+  background-color: #81d4fa; 
+  color: #003c47; 
+  box-shadow: 0 0 15px #81d4fa;
+  text-decoration: none;
+}
+
+
+#show-personagens{
+  margin-left: 30px;
+}
+
+#show-personagens p{
+    margin: 5px;
+    color: white;
+   
+}
+#show-personagens li{
+  margin-left: 30px;
+  color: white;
+}
+
+#show-personagens .info-title {
+  color: black; 
+  font-weight: 500;
+  font-size: 1.2em;
+}
