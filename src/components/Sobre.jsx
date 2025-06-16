@@ -55,7 +55,7 @@ function Sobre(){
 
 
    
-    emailjs.send('service_qfallhk', 'template_zzsvrcc', templateParams, 'YU30LAJ_Djv-ASqLK')
+    emailjs.send('service_95xkykl', 'template_zzsvrcc', templateParams, 'YU30LAJ_Djv-ASqLK')
       .then(
         (result) => {
           alert('Email enviado!');

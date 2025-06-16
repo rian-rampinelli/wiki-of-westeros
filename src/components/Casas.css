@@ -3,10 +3,27 @@
     flex-direction: column;
     align-items: center;
 }
-.img-casas{
+#container h1{
+    font-size: 3em;
+    margin-bottom: 16px;
+    color: var(--color-1);
+}
+#margin{
+    margin-top: 60px;
+}
+.img-casas {
     height: 250px;
-    
+    width: 250px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 20px; 
+    margin-bottom: 10px;
+    border-radius: 8px;
 }
-.section-cards{
+
+.section-cards {
     max-width: 1000px;
+    font-size: 2.2em;
+    text-align: justify;
 }
+

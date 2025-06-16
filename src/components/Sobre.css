@@ -1,5 +1,6 @@
+
+/*#fafafa  */
 body{
-  
   background-color: rgba(42, 59, 71, 0.7);
   margin: 0;
   padding: 0; 
@@ -7,11 +8,11 @@ body{
 
 #section-cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 30px;
   flex-wrap: wrap;
-  background-color: #2a3b47;
+  background-color: var(--color-1);
   border-radius: 10px;
   padding: 40px;
   margin-top: 30px;
@@ -142,6 +143,7 @@ body{
   outline: none;
   transition: border-color 0.3s ease;
   padding: 10px 10px;   
+  font-size: 1.2em;
 }
 
 #form-contato div textarea {
@@ -192,7 +194,7 @@ body{
 
 
 main #about-container #citacao {
-  font-size: 1.8em;
+  font-size: 1.6em;
   margin-bottom: 30px;
   margin-top: 40px;
 }
@@ -203,5 +205,5 @@ main #about-container #citacao #spancitacao {
   font-style: italic;
   
   text-align: center;
-  font-size: 0.5em;   
+  font-size: 0.7em;   
 }
