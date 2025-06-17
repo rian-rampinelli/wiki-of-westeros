@@ -1,7 +1,7 @@
 import NavBar from '../home/NavBar';
 import Footer from '../home/Footer';
 
-function PageLayout({ children }) {
+function PageLayout({ children,  }) {
   return (
     <>
       <NavBar />

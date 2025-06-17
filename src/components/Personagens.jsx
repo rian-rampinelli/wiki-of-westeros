@@ -94,6 +94,11 @@ function Personagens(){
 
     }
 
+    function pegarNomeCasas(str) {
+        const words = str.split(" ");
+        return words.slice(0, 2).join(" ");
+    }
+
     console.log(resultados)
 
     return(
@@ -128,17 +133,17 @@ function Personagens(){
                         <p><span className='info-title'>Nome:</span> {resultados[0].name}</p>
                         <p><span className='info-title'>Nascido:</span> {resultados[0].born}</p>
                         <p><span className='info-title'>Cultura:</span> {resultados[0].culture || "Desconhecido"}</p>
-                        <p><span className='info-title'>Principal Titulo:</span> {resultados[0].titles[0] || "Nao Possui"}</p>
-                        <p><span className='info-title'>Apelidos:</span> {resultados[0].aliases.slice(0,1).join(", ") || "Sem apelidos"}</p>
-                        <p><span className='info-title'>Casas e Alianças:</span></p>
-                        <ul>
-                            {casas.length > 0 ? (
-                            casas.map((casa, index) => <li key={index}>{casa}</li>)
-                            ) : (
-                            <li>Desconhecido</li>
-                            )}
-                        </ul>
-                        
+                        <p><span className='info-title'>Titulo:</span> {resultados[0].titles[0] || "Nao Possui"}</p>
+                        <p><span className='info-title'>Apelidos:</span> {resultados[0].aliases.slice(0,2).join(", ") || "Sem apelidos"}</p>
+                        <p>
+                        <span className='info-title'>Casas e Alianças:</span> {
+                            casas
+                            .slice(0, 2)
+                            .map(pegarNomeCasas)
+                            .join(", ")
+                        }
+                        </p>
+
                         </div>
                     )}
                     </>
