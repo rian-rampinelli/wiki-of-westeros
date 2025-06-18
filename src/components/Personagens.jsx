@@ -7,12 +7,6 @@ import Js from '../assets/JonSnow.jpg';
 
 
 
-//Daenerys Targaryen
-//Sansa Stark
-
-
-
-
 function Personagens(){
 
     const [nomePersonagem, setNomePersonagem] = useState("")

@@ -8,7 +8,7 @@ function NavBar(){
 
      const navigate = useNavigate();
 
-    function handleLogout() {
+    function fazerLogout() {
     localStorage.removeItem('auth');
     navigate('/login');
   }
@@ -24,9 +24,9 @@ function NavBar(){
                 <ul id='header-list-links'>
                     <li><Link to = "/sobre">Sobre</Link></li>
                     <li><Link to = "/personagens" >Personagens</Link></li>
-                    <li><Link to = "/casas">Casas</Link></li>
-                    <li><Link to = "/livros">Livros</Link></li>
-                    <li><button id='button-logout' onClick={handleLogout}><MdLogout /></button></li>
+                    <li><Link to = "/layoutcasas">Casas</Link></li>
+                    <li><Link to = "/casas">Livros</Link></li>
+                    <li><button id='button-logout' onClick={fazerLogout}><MdLogout /></button></li>
                     
                 </ul>
                

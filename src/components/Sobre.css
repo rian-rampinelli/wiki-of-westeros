@@ -82,9 +82,10 @@ body{
 
 #about-container h1{
     text-align: center;
-    padding-top: 160px;
+    padding-top: 130px;
     padding-bottom: 20px;
     font-size: 3.6em;
+    color: var(--color-1);
   
 }
 
