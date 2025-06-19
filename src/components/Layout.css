@@ -19,7 +19,9 @@
     width: 350px;
     margin: 30px;
     background-color: var(--color-1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     border-radius: 10px;
+    transition: transform 0.3s ease;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: white ;
@@ -32,6 +34,17 @@
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
 
+}
+.cards a{
+    text-decoration: none;
+    color: aliceblue;
+}
+#container .cards a:hover{
+    text-decoration: underline;
+    color: #81d4fa;
+}
+.cards a:visited {
+    color: aliceblue; 
 }
 
 #titulo-casas{

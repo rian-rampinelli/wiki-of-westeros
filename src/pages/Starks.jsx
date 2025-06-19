@@ -1,14 +1,19 @@
-import PageLayout from '../layout/PageLayout'
-import './Casas.css'
-import card2 from '../assets/starks.png';
 import axios from 'axios';
 import {useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaArrowLeft } from "react-icons/fa";
+import PageLayout from '../layout/PageLayout'
+import card from '../assets/starks.png';
+import './Casas.css'
 
-function Casas(){
+
+
+function Starks(){
 
     const[dadosCasa,setDadosCasa] = useState('')
     const[dadosFundador,setDadosFundador] = useState('')
     const[membros, setMembros] = useState([]);
+    const[mostrarTudo, setMostrarTudo] = useState(false);
     
 
     useEffect(() =>{
@@ -45,14 +50,17 @@ function Casas(){
     
     return(
         <PageLayout>
-            <main id='container'>
+            <main id='container-casas'>
 
                 
                 
                
                 <section className='section-cards'>
+                     <button className='voltar'>
+                        <li><Link to = "/layoutcasas"><FaArrowLeft size={40}/></Link></li>
+                    </button>
                     <h1 id='margin'>Starks</h1>
-                    <img className='img-casas' src={card2} alt="" />
+                    <img className='img-casas' src={card} alt="" />
                     
                     <p>A Casa Stark é uma das mais antigas e nobres famílias de Westeros. São conhecidos por sua honra, lealdade e pela rígida tradição de proteger o Norte. Descendem dos Primeiros Homens e governaram como Reis do Norte por milhares de anos antes da unificação dos Sete Reinos.
                     Mesmo após se tornarem Senhores de Winterfell, os Starks sempre foram respeitados por sua ligação com as tradições antigas, os deuses antigos e pela defesa dos valores do Norte. São sóbrios, sérios e extremamente ligados à família e ao dever..
@@ -60,32 +68,41 @@ function Casas(){
                     <h2>Informacoes da casa</h2>
                     
                         {dadosCasa && (
+                            <>
                             <div>
-                                <p><span>Nome:</span>{dadosCasa.name}</p>
-                                <p><span>Regiao:</span>{dadosCasa.region}</p>
-                                <p><span>Fundação:</span>{dadosCasa.founded}</p>
-                                <p><span>fundador:</span>{dadosFundador.name}</p>
-                                <p><span>Emblema:</span>{dadosCasa.coatOfArms}</p>
+                                <p><span>Nome:</span> {dadosCasa.name }</p>
+                                <p><span>Região:</span> {dadosCasa.region || "Sem regiao"}</p>
+                                <p><span>Fundação:</span> {dadosCasa.founded || 'Desconhecida'}</p>
+                                <p><span>Fundador:</span> {dadosFundador.name || 'Desconhecido'}</p>
+                                <p><span>Emblema:</span> {dadosCasa.coatOfArms}</p>
                                 <div className='membros'>
-                                <h2 style={{marginBottom:0}}>Membros e Aliados</h2>
-                                    <select >
-                                        <option value="">Membros</option>
-                                        {membros.map((nome, index) => (
-                                        <option key={index} value={nome}>
-                                            {nome}
-                                        </option>
+                                    <h2>Membros e Aliados</h2>
+
+                                    <ul>
+                                        {(mostrarTudo ? membros : membros.slice(0, 5)).map((nome, index) => (
+                                        <li key={index}>{nome}</li>
                                         ))}
-                                    </select>
-                                </div>
-                                <p className='frase-casa'>"{dadosCasa.words}"</p>
+                                    </ul>
+
+                                    {membros.length > 5 && (
+                                        <div style={{textAlign:'center'}}>
+                                            <button  onClick={() => setMostrarTudo(!mostrarTudo)}>
+                                            {mostrarTudo === false ? 'Mostrar tudo' : 'Mostrar menos' }
+                                            </button>
+                                        </div>
+                                    )}
+                                </div>     
                             </div>
+                            <p className='frase-casa'>"{dadosCasa.words}"</p>
+                            </>
                         )}
                 
                 </section>
+                
                 
             </main>
         </PageLayout>
     )
 }
 
-export default Casas
+export default Starks
