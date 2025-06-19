@@ -103,7 +103,7 @@ function Sobre(){
                         <div className="card card-3" style={{ backgroundImage: `url(${card4})` }}>
                             <div className="cards-overlay"></div>
                             <div className="card-info">
-                            <Link to="/serie">Série</Link>
+                            <Link to="/livro">Livros</Link>
                             </div>
                         </div>
                         </section>

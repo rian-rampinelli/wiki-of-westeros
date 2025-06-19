@@ -70,7 +70,7 @@ function Starks(){
                         {dadosCasa && (
                             <>
                             <div>
-                                <p><span>Nome:</span> {dadosCasa.name }</p>
+                                <p><strong>Nome:</strong> {dadosCasa.name }</p>
                                 <p><span>Região:</span> {dadosCasa.region || "Sem regiao"}</p>
                                 <p><span>Fundação:</span> {dadosCasa.founded || 'Desconhecida'}</p>
                                 <p><span>Fundador:</span> {dadosFundador.name || 'Desconhecido'}</p>
