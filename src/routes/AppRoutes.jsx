@@ -9,6 +9,7 @@ import Lannisters from "../pages/Lannisters";
 import Targaryens from "../pages/Targaryens";
 import Baratheons from "../pages/Baratheons";
 import Greyjoys from "../pages/Greyjoys";
+import Livros from "../components/Livros";
 
 
 function AppRoutes() {
@@ -18,6 +19,7 @@ function AppRoutes() {
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/personagens" element={<Personagens />} />  
       <Route path="/layoutcasas" element={<LayoutCasas />} />  
+      <Route path="/livros" element={<Livros />} />  
 
       <Route path="/starks" element={<Starks />} />
       <Route path="/lannisters" element={<Lannisters />} />

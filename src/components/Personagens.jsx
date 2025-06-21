@@ -5,6 +5,7 @@ import axios from 'axios'
 import { MoonLoader } from 'react-spinners';
 import Js from '../assets/JonSnow.jpg';
 import { Link } from 'react-router-dom';
+import Citacao from '../api/citacoes';
 
 
 
@@ -15,6 +16,7 @@ function Personagens(){
     const [casas, setCasas] = useState("");
     const [resultados, setResultados] = useState("");
     const [loading,setLoading] = useState(false);
+   
  
 
 
@@ -28,6 +30,12 @@ function Personagens(){
     },
     {   
         img: Js,
+        nome: "Tywin Lannister",
+        frase: "Nunca esqueça quem manda.",
+        casa: "House Lannister"
+    },
+    {   
+        img: Js,
         nome: "Ned Stark",
         frase: "A espada é minha sentença.",
         casa: "House Stark"
@@ -35,13 +43,13 @@ function Personagens(){
     {   
         img: Js,
         nome: "Daenerys Targaryen",
-        frase: "Dracarys.",
+        frase: "Dracary!.",
         casa: "House Targaryen"
     },
     {   
         img: Js,
         nome: "Jaime Lannister",
-        frase: "Pela mão do rei.",
+        frase: "Pela mão do rei!",
         casa: "House Lannister"
     },
     {   
@@ -53,7 +61,7 @@ function Personagens(){
     {   
         img: Js,
         nome: "Robert Baratheon",
-        frase: "Traga-me vinho.",
+        frase: "Traga-me vinho!",
         casa: "House Baratheon"
     },
     {   
@@ -68,16 +76,10 @@ function Personagens(){
         frase: "Eu bebo e sei das coisas.",
         casa: "House Lannister"
     },
-    {   
-        img: Js,
-        nome: "Tywin Lannister",
-        frase: "Nunca esqueça quem manda.",
-        casa: "House Lannister"
-    }
+    
 ];
 
 
-  
    
 
     async function buscarPersonagem(e) {
@@ -215,10 +217,16 @@ function Personagens(){
                                 {personagem.casa}
                                 </Link>
                                 </div>
+                                
                             </div>
+                            
                         );
                     })}
+                    
                 </section>
+               
+                <Citacao personagem={"tywin"}/>
+                   
             </main>
         </PageLayout>
     )

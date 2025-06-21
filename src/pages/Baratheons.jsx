@@ -14,8 +14,8 @@ function Baratheons() {
   const [dadosCasa, setDadosCasa] = useState('');
   const [dadosFundador, setDadosFundador] = useState('');
   const [membros, setMembros] = useState([]);
-   const[mostrarTudo, setMostrarTudo] = useState(false);
-   const navigate = useNavigate();
+  const[mostrarTudo, setMostrarTudo] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function BuscarDadosCasa() {

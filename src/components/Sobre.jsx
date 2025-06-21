@@ -4,9 +4,9 @@ import card5 from '../assets/card5.jpeg';
 import card2 from '../assets/card2.jpeg';
 import card4 from '../assets/card4.jpeg';
 import { Link } from 'react-router-dom';
-import { useState ,useEffect} from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
-import axios from 'axios'
+import Citacao from '../api/citacoes.jsx';
 
 
 
@@ -20,8 +20,7 @@ function Sobre(){
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [assunto, setAssunto] = useState('');
-    const [citacao,setcitacao] = useState('')
-    const [personagemCitacao,setPersonagemCitacao] = useState('')
+   
 
 
     const templateParams = {
@@ -31,18 +30,7 @@ function Sobre(){
       assunto:assunto,
     };
 
-     useEffect(() => {
-        axios.get('https://api.gameofthronesquotes.xyz/v1/author/jon/1')
-        .then(response => {
-            console.log(response.data)
-            setcitacao(response.data.sentence)
-            setPersonagemCitacao(response.data.character.name)
-            
-        })
-        .catch(error => {
-            console.error('Erro ao buscar citacoes:', error);
-        });
-    }, []);
+    
 
 
     function handleEmail(e){
@@ -145,10 +133,9 @@ function Sobre(){
                         </div>
                     </form>
                 
-                     <p id="citacao">
-                        {citacao} <br />
-                        <strong><span id="spancitacao">"{personagemCitacao}"</span></strong>
-                    </p>
+                    
+                    <Citacao personagem={"ned"}/>
+                    
                 </main>
             </PageLayout>
     

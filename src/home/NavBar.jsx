@@ -25,7 +25,7 @@ function NavBar(){
                     <li><Link to = "/sobre">Sobre</Link></li>
                     <li><Link to = "/personagens" >Personagens</Link></li>
                     <li><Link to = "/layoutcasas">Casas</Link></li>
-                    <li><Link to = "/casas">Livros</Link></li>
+                    <li><Link to = "/livros">Livros</Link></li>
                     <li><button id='button-logout' onClick={fazerLogout}><MdLogout /></button></li>
                     
                 </ul>

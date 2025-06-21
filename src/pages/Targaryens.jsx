@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from "react-icons/fa";
 import PageLayout from '../layout/PageLayout'
 import card from '../assets/targaryen.png';
@@ -13,7 +14,8 @@ function Targaryens(){
     const[dadosCasa,setDadosCasa] = useState('')
     const[dadosFundador,setDadosFundador] = useState('')
     const[membros, setMembros] = useState([]);
-     const[mostrarTudo, setMostrarTudo] = useState(false);
+    const[mostrarTudo, setMostrarTudo] = useState(false);
+    const navigate = useNavigate();
     
 
     useEffect(() =>{
@@ -56,8 +58,8 @@ function Targaryens(){
                 
                
                 <section className='section-cards'>
-                     <button className='voltar'>
-                        <li><Link to = "/layoutcasas"><FaArrowLeft size={40} /></Link></li>
+                     <button className='voltar' onClick={() => navigate(-1)}>
+                        <FaArrowLeft style={{cursor:'pointer'}} size={40}/>
                     </button>
                     <h1 className='titulo-targaryens' id='margin'>Targaryesn</h1>
                     <img className='img-casas' src={card} alt="" />

@@ -99,6 +99,10 @@
     color: var(--color-1);
 }
 
+#container-casas span{
+  font-weight: bold;
+}
+
 @media (max-width: 550px) {
   .section-cards {
     padding: 0;

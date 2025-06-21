@@ -139,7 +139,7 @@
   border-radius: 10px;
   overflow: hidden;
   text-align: center;
-  display: flex;
+  
   flex-direction: column;
 }
 
