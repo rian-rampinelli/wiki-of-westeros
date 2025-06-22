@@ -1,5 +1,5 @@
 # Wiki of Westeros
-> Breve fonte de informações sobre o universo de GOT.
+Breve fonte de informações sobre o universo de GOT.
 
 # Participantes
 - Rian Barbosa Rampinelli Delgado(G10)

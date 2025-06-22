@@ -1,8 +1,8 @@
-import './NavBar.css'
-import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 import { GiStoneThrone } from "react-icons/gi";
 import { MdLogout } from "react-icons/md";
+import './NavBar.css'
 
 function NavBar(){
 

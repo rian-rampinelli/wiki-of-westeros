@@ -1,13 +1,16 @@
-import './Sobre.css'
-import PageLayout from '../layout/PageLayout';
-import card5 from '../assets/card5.jpeg';
-import card2 from '../assets/card2.jpeg';
-import card4 from '../assets/card4.jpeg';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useState,useEffect } from 'react';
 import emailjs from '@emailjs/browser';
-import Citacao from '../api/citacoes.jsx';
-import enviarEmail from './EnviarEmail.js';
+import Citacao from '../api/CitacoesApi.jsx';
+//import enviarEmail from './EnviarEmail.js';
+import PageLayout from '../components/PageLayout.jsx';
+import card5 from '../assets/sobre/card5.jpeg';
+import card2 from '../assets/sobre/card2.jpeg';
+import card4 from '../assets/sobre/card4.jpeg';
+import './Sobre.css'
+
+
+
 
 
 
@@ -22,9 +25,9 @@ function Sobre(){
     const [message, setMessage] = useState('');
     const [assunto, setAssunto] = useState('');
 
-    useEffect(() => {
+    /*useEffect(() => {
         enviarEmail("Sobre");
-    }, []);
+    }, []);*/
    
 
 

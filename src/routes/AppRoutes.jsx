@@ -1,16 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "../components/ScrollToTop";
-import NotFound from "../components/NotFound";
-import Sobre from "../components/Sobre";
-import Personagens from "../components/Personagens";  
-
-import LayoutCasas from "../components/LayoutCasas";
+import NotFound from "../pages/NotFound";
+import Sobre from "../pages/Sobre";
+import Personagens from "../pages/Personagens";  
+import LayoutCasas from "../pages/Casas";
 import Starks from "../pages/Starks";
 import Lannisters from "../pages/Lannisters";
 import Targaryens from "../pages/Targaryens";
 import Baratheons from "../pages/Baratheons";
 import Greyjoys from "../pages/Greyjoys";
-import Livros from "../components/Livros";
+import Livros from "../pages/Livros";
 
 
 function AppRoutes() {

@@ -1,12 +1,10 @@
-import axios from 'axios';
 import { useEffect, useState } from 'react';
-
-import PageLayout from '../layout/PageLayout';
 import { FaArrowLeft } from "react-icons/fa";
-import './Casas.css';
-import card from '../assets/baratheon.png';
 import { useNavigate } from 'react-router-dom';
-
+import axios from 'axios';
+import PageLayout from '../components/PageLayout';
+import card from '../assets/casas-especificas/baratheon.png';
+import './NomeCasas.css';
 
 
 function Baratheons() {

@@ -1,6 +1,6 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-import './citacoes.css'
+import axios from "axios";
+import './CitacoesApi.css'
 
 function Citacao({ personagem }) {
     const [citacao, setCitacao] = useState('');

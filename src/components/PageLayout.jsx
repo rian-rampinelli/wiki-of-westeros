@@ -1,5 +1,5 @@
-import NavBar from '../home/NavBar';
-import Footer from '../home/Footer';
+import NavBar from './NavBar';
+import Footer from './Footer';
 
 function PageLayout({ children,  }) {
   return (

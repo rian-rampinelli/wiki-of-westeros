@@ -1,113 +1,67 @@
-#container-casas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#container-casas h1{
-    font-size: 3em;
-    text-align: center;
-    margin-bottom: 16px;
-    color: var(--color-1);
-    letter-spacing:3px;
-}
-#margin{
-    margin-top: 70px;
-}
-.img-casas {
-    height: 250px;
-    width: 250px;
-    float: left;
-    margin-top: 10px;
-    margin-right: 20px; 
-    margin-bottom: 10px;
-    border-radius: 8px;
-}
-
-.section-cards {
-    max-width: 1000px;
-    font-size: 2em;
-    text-align: justify;
-    background-color: rgba(0, 0, 0, 0.1);
-    padding:0px 60px;
-    border-radius: 6px;
-    margin-bottom: 50px;
-    margin-top: 35px;
-}
-
-
-
-#container-casas h2{
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    color: var(--color-1);
-}
-
-.membros ul {
-  list-style: none;
-  padding: 0;
-  
-}
-
-.membros li {
-  background-color: var(--color-1);
-  margin: 5px 0;
-  padding: 8px;
-  border-radius: 4px;
-  color: white;
-}
-
-.membros button {
-  text-decoration: none;
-  color:black; 
-  border: 2px solid #81d4fa;
-  border-radius: 6px;
-  padding: 2% 8%;
-  font-size: 0.7em;
-  background-color: rgba(129, 212, 250, 0.3); 
-  transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 0 0 8px rgba(129, 212, 250, 0.5);
-  margin-top: 12px;
-}
-.membros button:hover {
-   background-color: #81d4fa; 
-  color: #003c47; 
-  box-shadow: 0 0 15px #81d4fa;
-  text-decoration: none;
-}
-
-.frase-casa{
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 1em;
-    margin-top: 1em;
-}
-
-.voltar{
-    background-color: transparent;
-    border: none;
-    list-style-type: none;
-    position: absolute;
-    margin-top: 30px;
-    color: var(--color-1);
-    padding-right: 30px;
-
-    
-}
-
-.voltar a:visited{
-    color: var(--color-1);
-}
-
-#container-casas span{
-  font-weight: bold;
-}
-
-@media (max-width: 550px) {
-  .section-cards {
+*{
+    margin: 0;
     padding: 0;
-  }
-  #container-casas h1{
-    font-size: 2em;
-  }
+}
+#container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap:10px;
+    font-family: 'poppins';
+    max-width: 1600px;
+    margin: auto;
+
+
+}
+
+.cards{
+    width: 350px;
+    margin: 30px;
+    background-color: var(--color-1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white ;
+}
+
+.cards img{
+    width: 100%;
+    height: 180px;
+    object-position: top center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+
+}
+.cards a{
+    text-decoration: none;
+    color: aliceblue;
+}
+#container .cards a:hover{
+    text-decoration: underline;
+    color: #81d4fa;
+}
+.cards a:visited {
+    color: aliceblue; 
+}
+
+#titulo-casas{
+    text-align: center;
+    font-size: 3.5em;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: var(--color-1);
+
+}
+
+#container .cards h2{
+    font-size: 2.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#container .cards .titulos-casas{
+    color: aliceblue;
 }

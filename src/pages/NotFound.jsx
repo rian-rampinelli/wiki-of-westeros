@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { RiSwordFill } from "react-icons/ri";
-import gotImage from '../assets/got-nf.jpg'; 
+import gotImage from '../assets/img-principal.jpg'; 
 import './NotFound.css'
 
 

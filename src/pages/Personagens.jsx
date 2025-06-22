@@ -1,23 +1,24 @@
-import {useState,useEffect } from 'react'
-import PageLayout from '../layout/PageLayout'
-import './Personagens.css'
-import axios from 'axios'
-import { MoonLoader } from 'react-spinners';
-import snow from '../assets/n.jpg';
-import tywin from '../assets/tywin.jpg';
-import ned from '../assets/ned.jpg';
-import daenerys from '../assets/daenerys.jpeg';
 import { Link } from 'react-router-dom';
-import Citacao from '../api/citacoes';
-import enviarEmail from './EnviarEmail';
+import { useState } from 'react';
+import { MoonLoader } from 'react-spinners';
+import axios from 'axios';
+//import enviarEmail from './EnviarEmail';
+import PageLayout from '../components/PageLayout';
+import Citacao from '../api/CitacoesApi';
+import snow from '../assets/personagens/snow.jpg';
+import tywin from '../assets/personagens/tywin.jpg';
+import ned from '../assets/personagens/ned.jpg';
+import daenerys from '../assets/personagens/daenerys.jpeg';
+import './Personagens.css';
+
 
 
 
 function Personagens(){
 
-    useEffect(() => {
+    /*useEffect(() => {
         enviarEmail("Personagens");
-    }, []);
+    }, []);*/
 
 
     const [nomePersonagem, setNomePersonagem] = useState("")

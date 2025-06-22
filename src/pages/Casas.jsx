@@ -1,21 +1,22 @@
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
 import { Link } from 'react-router-dom';  
-import cardStarks from '../assets/starks-layout-casas.jpg';
-import cardLannisters from '../assets/lannisters-layout-casas.jpg';
-import cardTargaryens from '../assets/targaryens-layout-casas.jpg';
-import cardBaratheon from '../assets/baratheon-layout-casas.jpg';
-import cardGreyjoys from '../assets/greyjoys-layout-casas.jpg';
+//import enviarEmail from './EnviarEmail';
+import cardStarks from '../assets/casas-main/starks.jpg';
+import cardLannisters from '../assets/casas-main/lannisters.jpg';
+import cardTargaryens from '../assets/casas-main/targaryens.jpg';
+import cardBaratheon from '../assets/casas-main/baratheon.jpg';
+import cardGreyjoys from '../assets/casas-main/greyjoys.jpg';
+import PageLayout from '../components/PageLayout';
+import './Casas.css';
 
-import PageLayout from '../layout/PageLayout';
-import './Layout.css';
-import enviarEmail from './EnviarEmail';
+
 
 function LayoutCasas() {
 
-  useEffect(() => {
+  /*useEffect(() => {
     enviarEmail("Casas");
-  }, []);
-  
+  }, []);*/
+
   const casas = [
     { nome: 'Starks', alt: 'Starks', img: cardStarks, rota: '/starks' },
     { nome: 'Lannisters', alt: 'Lannisters', img: cardLannisters, rota: '/lannisters' },
