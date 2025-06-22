@@ -1,15 +1,23 @@
-import {useState } from 'react'
+import {useState,useEffect } from 'react'
 import PageLayout from '../layout/PageLayout'
 import './Personagens.css'
 import axios from 'axios'
 import { MoonLoader } from 'react-spinners';
-import Js from '../assets/JonSnow.jpg';
+import snow from '../assets/n.jpg';
+import tywin from '../assets/tywin.jpg';
+import ned from '../assets/ned.jpg';
+import daenerys from '../assets/daenerys.jpeg';
 import { Link } from 'react-router-dom';
 import Citacao from '../api/citacoes';
+import enviarEmail from './EnviarEmail';
 
 
 
 function Personagens(){
+
+    useEffect(() => {
+        enviarEmail("Personagens");
+    }, []);
 
 
     const [nomePersonagem, setNomePersonagem] = useState("")
@@ -23,55 +31,55 @@ function Personagens(){
    
     const personagensFixos = [
     {   
-        img: Js,
+        img: snow,
         nome: "Jon Snow",
         frase: "O Norte se lembra.",
         casa: "House Stark"
     },
     {   
-        img: Js,
+        img: tywin,
         nome: "Tywin Lannister",
         frase: "Nunca esqueça quem manda.",
         casa: "House Lannister"
     },
     {   
-        img: Js,
+        img: ned,
         nome: "Ned Stark",
         frase: "A espada é minha sentença.",
         casa: "House Stark"
     },
     {   
-        img: Js,
+        img: daenerys,
         nome: "Daenerys Targaryen",
         frase: "Dracary!.",
         casa: "House Targaryen"
     },
     {   
-        img: Js,
+        img: snow,
         nome: "Jaime Lannister",
         frase: "Pela mão do rei!",
         casa: "House Lannister"
     },
     {   
-        img: Js,
+        img: snow,
         nome: "Robb Stark",
         frase: "O Rei no Norte!",
         casa: "House Stark"
     },
     {   
-        img: Js,
+        img: snow,
         nome: "Robert Baratheon",
         frase: "Traga-me vinho!",
         casa: "House Baratheon"
     },
     {   
-        img: Js,
+        img: snow,
         nome: "Theon Greyjoy",
         frase: "O que está morto não pode morrer.",
         casa: "House Greyjoy"
     },
     {   
-        img: Js,
+        img: snow,
         nome: "Tyrion Lannister",
         frase: "Eu bebo e sei das coisas.",
         casa: "House Lannister"
@@ -171,7 +179,7 @@ function Personagens(){
                     </form>
 
                     {loading ? (
-                         <div id='loading'>
+                         <div id='loading-personagem'>
                              <MoonLoader color='#81d4fa'/>
                          </div>
 
@@ -207,15 +215,15 @@ function Personagens(){
                     {personagensFixos.map(function(personagem, index) {
                         return (
                             <div key={index} className='cards-personagens'>
-                                <img src={Js} alt={personagem.nome} />
+                                <img src={personagem.img} alt={personagem.nome} />
                                 <div className='info-cards'>
-                                <strong>
-                                    <p id='title-card'>{personagem.nome}</p>
-                                </strong>
-                                <p id='frase-personagem'>"{personagem.frase}"</p>
-                                <Link to={casaParaRota(personagem.casa)} className='link-casas'>
-                                {personagem.casa}
-                                </Link>
+                                    <strong>
+                                        <p id='title-card'>{personagem.nome}</p>
+                                    </strong>
+                                    <p id='frase-personagem'>"{personagem.frase}"</p>
+                                    <Link to={casaParaRota(personagem.casa)} className='link-casas'>
+                                    {personagem.casa}
+                                    </Link>
                                 </div>
                                 
                             </div>

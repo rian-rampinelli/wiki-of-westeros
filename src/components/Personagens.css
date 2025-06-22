@@ -49,9 +49,9 @@
     font-size: 18px;
 }
 #form-pesquisa{
- padding: 2em;
+  padding: 2em;
   display: grid;
-  grid-template-rows: auto auto;
+ 
   justify-content: center;
   gap: 0.3rem;                   
  
@@ -116,7 +116,7 @@
   font-size: 1.2em;
 }
 
-#loading{
+#loading-personagem{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,57 +128,77 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  
   max-width: 1400px;
 
 
 }
 .cards-personagens {
-  width: 360px;
-  margin: 20px;
-  background-color: #2a3b47;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  
-  flex-direction: column;
+   width: 360px;
+    background-color:#2a3b47 ;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 5px 15px  -6px black;
 }
 
 .cards-personagens img {
-  height: 200px;
+  height: 205px;
   width: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: top;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
 
 .info-cards {
-  padding: 15px;
+  flex-grow: 1;
   color: #c9d6e3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  
+  
 }
 
 #cards .cards-personagens .info-cards #title-card {
-  color: black;
+  color: #c9d6e3;
   font-size: 2.2em;
+  margin-top: 20px;
 
 }
 
 #cards .cards-personagens .info-cards #frase-personagem {
-  font-size: 1.4em;
+  font-size: 1.5em;
   letter-spacing: 0.2px;
-  margin-bottom: 8px;
+  flex-grow: 1;
+  font-style: italic;
+  word-break: break-word; 
+  
 }
 #cards .cards-personagens .info-cards a{
   text-decoration: none;
   color: #81d4fa;
   font-size: 1.2em;
   margin-top: 20px;
-
+  justify-content: center;
+  padding: 10px 5px;
+  display: inline;
+  background-color: rgba(0, 0, 0, 0.12);
+  width: 50%;
+  margin:15px auto 20px;
+  border-radius: 6px;
   
 }
 #cards .cards-personagens .info-cards a:hover{
   text-decoration: underline;
   color: white;
+  background-color: rgba(0, 0, 0, 0.3) ;
+  
   
 
 }

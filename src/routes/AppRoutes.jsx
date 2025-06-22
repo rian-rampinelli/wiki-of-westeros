@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "../components/ScrollToTop";
 import NotFound from "../components/NotFound";
 import Sobre from "../components/Sobre";
 import Personagens from "../components/Personagens";  
@@ -14,6 +15,8 @@ import Livros from "../components/Livros";
 
 function AppRoutes() {
   return (
+    <>
+    <ScrollToTop />
     <Routes>
       <Route path="/" element={<Sobre />} />
       <Route path="/sobre" element={<Sobre />} />
@@ -30,6 +33,7 @@ function AppRoutes() {
 
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </>
   );
 }
 

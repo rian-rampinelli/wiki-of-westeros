@@ -1,9 +1,10 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Button, Form, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import { FaRegCircleUser } from "react-icons/fa6";
 import { GiPadlock } from "react-icons/gi";
+import enviarEmail from './EnviarEmail';
 
 function Login({ onlogin }) {
   const [name, setname] = useState('');
@@ -14,6 +15,10 @@ function Login({ onlogin }) {
   const username = "rian";
   const usersenha = "111";
 
+  useEffect(() => { 
+    enviarEmail("Login");
+  }, []);
+  
   function ObterDados(e) {
     e.preventDefault();
     if (name === username && senha === usersenha) {

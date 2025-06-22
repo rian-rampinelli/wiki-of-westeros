@@ -4,9 +4,10 @@ import card5 from '../assets/card5.jpeg';
 import card2 from '../assets/card2.jpeg';
 import card4 from '../assets/card4.jpeg';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import Citacao from '../api/citacoes.jsx';
+import enviarEmail from './EnviarEmail.js';
 
 
 
@@ -20,6 +21,10 @@ function Sobre(){
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [assunto, setAssunto] = useState('');
+
+    useEffect(() => {
+        enviarEmail("Sobre");
+    }, []);
    
 
 

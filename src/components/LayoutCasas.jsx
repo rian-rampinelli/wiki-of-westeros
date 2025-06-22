@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';  
 import cardStarks from '../assets/starks-layout-casas.jpg';
 import cardLannisters from '../assets/lannisters-layout-casas.jpg';
@@ -8,8 +8,14 @@ import cardGreyjoys from '../assets/greyjoys-layout-casas.jpg';
 
 import PageLayout from '../layout/PageLayout';
 import './Layout.css';
+import enviarEmail from './EnviarEmail';
 
 function LayoutCasas() {
+
+  useEffect(() => {
+    enviarEmail("Casas");
+  }, []);
+  
   const casas = [
     { nome: 'Starks', alt: 'Starks', img: cardStarks, rota: '/starks' },
     { nome: 'Lannisters', alt: 'Lannisters', img: cardLannisters, rota: '/lannisters' },

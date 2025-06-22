@@ -4,9 +4,16 @@ import './Livros.css';
 import PageLayout from '../layout/PageLayout';
 import Citacao from '../api/citacoes';
 import { MoonLoader } from 'react-spinners';
+import enviarEmail from './EnviarEmail';
+
 export default function Livros() {
     const [selecionadosLivros, setSelecionadosLivros] = useState([]);
     const [loading,setLoading] = useState(false);
+
+    useEffect(() => {
+        
+        enviarEmail("Livros");
+    }, []);
 
     useEffect(() => {
         async function pegarLivro() {
@@ -111,9 +118,9 @@ export default function Livros() {
                     {selecionadosLivros.map((livro, index) => (
                         <div key={index} className="card-livro">
                             <h2>{livro.nome } - {index  + 1}</h2>
-                            <p><strong>Data de lançamento:</strong> {new Date(livro.data).toLocaleDateString()}</p>
-                            <p><strong>Páginas:</strong> {livro.paginas}</p>
-                            <p id='descricao'><strong>Descrição:</strong> {livro.descricao}</p>
+                            <p style={{borderBottomLeftRadius:0,borderBottomRightRadius:0}}><strong>Data de lançamento:</strong> {new Date(livro.data).toLocaleDateString()}</p>
+                            <p style={{borderRadius:0}}><strong>Páginas:</strong> {livro.paginas}</p>
+                            <p  style={{borderTopLeftRadius:0,borderTopRightRadius:0}}id='descricao'><strong>Descrição:</strong> {livro.descricao}</p>
                         </div>
                     ))}
                 </div>
