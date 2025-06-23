@@ -41,8 +41,11 @@ npm run dev
   "nome": "Jon Snow",
   "nascido": "In 218 AC",
   "cultura": "Northmen",
-  "titulo": "Lord Commander of the Night's Watch",
-  "apelidos": ["Lord Snow", "Ned Stark's Bastard"],
+  "titulo": "Lord Commander of the Night\s Watch",
+  "apelidos": [
+     "Lord Snow",
+     "Ned Stark\s Bastard"
+     ],
   "casas": ["House Stark of Winterfell"]
 }
 
@@ -50,18 +53,18 @@ npm run dev
 
 ```json
 {
-  "Nome": "House Lannister of Casterly Rock",
-  "Região": "The Westerlands",
-  "Fundacao": "Age of Heroes",
-  "Fundador": "Lann",
-  "Emblema": A gold lion, on a crimson field(Gules, a lion or),
+  "nome": "House Lannister of Casterly Rock",
+  "região": "The Westerlands",
+  "fundacao": "Age of Heroes",
+  "fundador": "Lann",
+  "emblema": A gold lion, on a crimson field(Gules, a lion or),
   "membros_e_aliancas": [
     "Tywin Lannister",
     "Alysanne Farman",
     "Jaime Lannister",
     "Cersei Lannister"
   ],
-  "Frase" : "Hear Me Roar!"
+  "frase" : "Hear Me Roar!"
 }
 
 
@@ -74,3 +77,13 @@ npm run dev
   "lancamento": "1996-08-06",
   "paginas": 694,
 }
+
+## Saída da API de **Citações**
+
+```json
+
+{
+  "sentence" : "Winter Is Coming!"
+  "name" : "Eddard "Ned" Stark"
+}
+
