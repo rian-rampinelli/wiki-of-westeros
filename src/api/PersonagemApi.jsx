@@ -11,6 +11,5 @@ export default async function handlebuscarPersonagem(nomePersonagem) {
     return response.data;
   } catch (error) {
     console.error("Erro ao buscar personagem:", error);
-    throw error; // <<< Importante: para propagar o erro para o catch no componente
   }
 }

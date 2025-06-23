@@ -165,7 +165,7 @@ export default function Personagens() {
                   <span className="info-title">Nome:</span> {resultados[0].name}
                 </p>
                 <p>
-                  <span className="info-title">Nascido:</span> {resultados[0].born}
+                  <span className="info-title">Nascido:</span> {resultados[0].born ? resultados[0].born : "Sem Registro"}
                 </p>
                 <p>
                   <span className="info-title">Cultura:</span>{" "}

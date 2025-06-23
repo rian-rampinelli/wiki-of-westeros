@@ -30,3 +30,47 @@ git clone https://gitlab.com/alunos-dfe/rian-projetofinal.git
 cd rian-projetofinal
 npm install
 npm run dev
+'''
+
+# Informações dos JSONs
+
+## Saída da API de **Personagens**
+
+```json
+{
+  "nome": "Jon Snow",
+  "nascido": "In 218 AC",
+  "cultura": "Northmen",
+  "titulo": "Lord Commander of the Night's Watch",
+  "apelidos": ["Lord Snow", "Ned Stark's Bastard"],
+  "casas": ["House Stark of Winterfell"]
+}
+
+## Saída da API de **Casas**
+
+```json
+{
+  "Nome": "House Lannister of Casterly Rock",
+  "Região": "The Westerlands",
+  "Fundacao": "Age of Heroes",
+  "Fundador": "Lann",
+  "Emblema": A gold lion, on a crimson field(Gules, a lion or),
+  "membros_e_aliancas": [
+    "Tywin Lannister",
+    "Alysanne Farman",
+    "Jaime Lannister",
+    "Cersei Lannister"
+  ],
+  "Frase" : "Hear Me Roar!"
+}
+
+
+## Saída da API de **Livros**
+
+```json
+
+{
+  "titulo": "A Game of Thrones",,
+  "lancamento": "1996-08-06",
+  "paginas": 694,
+}
