@@ -65,7 +65,7 @@ npm run dev
     "Jaime Lannister",
     "Cersei Lannister"
   ],
-  "frase" : "Hear Me Roar!"
+  "frase": "Hear Me Roar!"
 }
 ```
 
@@ -75,7 +75,7 @@ npm run dev
 ```json
 
 {
-  "titulo": "A Game of Thrones",,
+  "titulo": "A Game of Thrones",
   "lancamento": "1996-08-06",
   "paginas": 694,
 }
@@ -86,7 +86,7 @@ npm run dev
 ```json
 
 {
-  "sentence" : "Winter Is Coming!"
+  "sentence" : "Winter Is Coming!",
   "name" : "Eddard Ned Stark"
 }
 ```

@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from "react-icons/fa";
 import { MoonLoader } from 'react-spinners';
 import axios from 'axios';
+import enviarEmail from '../components/EnviarEmail';
 import PageLayout from '../components/PageLayout';
 import card from '../assets/casas-especificas/lannister.png';
 import './NomeCasas.css';
 
 function Lannisters(){
+
+    
 
     const[dadosCasa,setDadosCasa] = useState('')
     const[dadosFundador,setDadosFundador] = useState('')
@@ -15,6 +18,10 @@ function Lannisters(){
     const[mostrarTudo, setMostrarTudo] = useState(false);
     const [loading,setLoading] = useState(false)
     const navigate = useNavigate();
+
+    useEffect(() => {
+        enviarEmail("Lannisters");
+      }, []);
     
 
     useEffect(() =>{

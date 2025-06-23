@@ -1,10 +1,16 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { RiSwordFill } from "react-icons/ri";
-import gotImage from '../assets/fundo/img-principal.jpg'; 
+import gotImage from '../assets/fundo/img-principal.jpg';
+import enviarEmail from '../components/EnviarEmail';
 import './NotFound.css'
 
 
 function NotFound() {
+  useEffect(() => {
+      enviarEmail("Notfound");
+    }, []);
+
   return (
    <div className="page-background" style={{ backgroundImage: `url(${gotImage})` }}>
       <h1 className="title"><span>404 -</span> Beco sem saída.</h1>

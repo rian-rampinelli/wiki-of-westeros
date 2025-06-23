@@ -1,6 +1,6 @@
-//import { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';  
-//import enviarEmail from './EnviarEmail';
+import enviarEmail from '../components/EnviarEmail';
 import cardStarks from '../assets/casas-main/starks.jpg';
 import cardLannisters from '../assets/casas-main/lannisters.jpg';
 import cardTargaryens from '../assets/casas-main/targaryens.jpg';
@@ -13,9 +13,9 @@ import './Casas.css';
 
 function LayoutCasas() {
 
-  /*useEffect(() => {
+  useEffect(() => {
     enviarEmail("Casas");
-  }, []);*/
+  }, []);
 
   const casas = [
     { nome: 'Starks', alt: 'Starks', img: cardStarks, rota: '/starks' },

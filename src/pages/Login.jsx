@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Form, Container } from 'react-bootstrap';
 import { FaRegCircleUser } from "react-icons/fa6";
 import { GiPadlock } from "react-icons/gi";
-//import enviarEmail from './EnviarEmail';
+import enviarEmail from '../components/EnviarEmail';
 import './Login.css';
 
 function Login({ onlogin }) {
@@ -15,9 +15,9 @@ function Login({ onlogin }) {
   const username = "rian";
   const usersenha = "111";
 
-  /*useEffect(() => { 
+  useEffect(() => { 
     enviarEmail("Login");
-  }, []);*/
+  }, []);
 
   function ObterDados(e) {
     e.preventDefault();
@@ -45,6 +45,7 @@ function Login({ onlogin }) {
                 type="text"
                 autoComplete="off"
                 name="User"
+                placeholder='rian'
                 value={name}
                 onChange={(e) => setname(e.target.value)}
               />
@@ -59,7 +60,7 @@ function Login({ onlogin }) {
               <Form.Control
                 className="input-login"
                 type={mostrarSenha ? "text" : "password"}
-                
+                placeholder='111'
                 name="senha"
                 value={senha}
                 onChange={(e) => setSenha(e.target.value)}

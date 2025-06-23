@@ -4,18 +4,25 @@ import { useNavigate } from 'react-router-dom';
 import { MoonLoader } from 'react-spinners';
 import axios from 'axios';
 import PageLayout from '../components/PageLayout';
+import enviarEmail from '../components/EnviarEmail';
 import card from '../assets/casas-especificas/baratheon.png';
 import './NomeCasas.css';
 
 
 function Baratheons() {
 
+  
   const [dadosCasa, setDadosCasa] = useState('');
   const [dadosFundador, setDadosFundador] = useState('');
   const [membros, setMembros] = useState([]);
   const[mostrarTudo, setMostrarTudo] = useState(false);
   const [loading,setLoading] = useState(false)
   const navigate = useNavigate();
+
+  useEffect(() => {
+      enviarEmail("Baratheons");
+    }, []);
+
 
   useEffect(() => {
     async function BuscarDadosCasa() {

@@ -1,8 +1,8 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import Citacao from '../api/CitacoesApi.jsx';
-//import enviarEmail from './EnviarEmail.js';
+import enviarEmail from '../components/EnviarEmail';
 import PageLayout from '../components/PageLayout.jsx';
 import card5 from '../assets/sobre/card5.jpeg';
 import card2 from '../assets/sobre/card2.jpeg';
@@ -25,9 +25,9 @@ function Sobre(){
     const [message, setMessage] = useState('');
     const [assunto, setAssunto] = useState('');
 
-    /*useEffect(() => {
+    useEffect(() => {
         enviarEmail("Sobre");
-    }, []);*/
+    }, []);
    
 
 
@@ -99,7 +99,7 @@ function Sobre(){
                         <div className="card card-3" style={{ backgroundImage: `url(${card4})` }}>
                             <div className="cards-overlay"></div>
                             <div className="card-info">
-                            <Link to="/livro">Livros</Link>
+                            <Link to="/livros">Livros</Link>
                             </div>
                         </div>
                         </section>

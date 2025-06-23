@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { MoonLoader } from "react-spinners";
 import axios from "axios";
 import { capitalizarNome, pegarNomeCasas, casaParaRota } from '../utils/helpers.js';
 import PageLayout from "../components/PageLayout";
+import enviarEmail from '../components/EnviarEmail';
 import Citacao from "../api/CitacoesApi";
 import handlebuscarPersonagem from '../api/PersonagemApi';
 import snow from "../assets/personagens/snow.jpg";
@@ -80,6 +81,10 @@ export default function Personagens() {
   const [casas, setCasas] = useState([]);
   const [resultados, setResultados] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+      enviarEmail("Personagens");
+    }, []);
 
   async function buscarPersonagem(e) {
     e.preventDefault();

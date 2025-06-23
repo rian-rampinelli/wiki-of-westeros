@@ -196,5 +196,13 @@ body{
 
   margin-top: 75px;
 }
-
+@media screen and (max-width: 430px) {
+  #form-contato div input,
+  #form-contato div textarea {
+    width: 280px;
+  }
+  #about-container h1{
+    font-size: 350%;
+  }
+}
 

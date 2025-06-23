@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from "react-icons/fa";
 import { MoonLoader } from 'react-spinners';
 import axios from 'axios';
+import enviarEmail from '../components/EnviarEmail';
 import PageLayout from '../components/PageLayout';
 import card from '../assets/casas-especificas/greyjoy.png';
 import './NomeCasas.css';
@@ -11,12 +12,18 @@ import './NomeCasas.css';
 
 function Greyjoys(){
 
+    
+
     const[dadosCasa,setDadosCasa] = useState('')
     const[dadosFundador,setDadosFundador] = useState('')
     const[membros, setMembros] = useState([]);
     const[mostrarTudo, setMostrarTudo] = useState(false);
     const [loading,setLoading] = useState(false)
     const navigate = useNavigate();
+
+    useEffect(() => {
+        enviarEmail("Greyjoys");
+      }, []);
     
 
     useEffect(() =>{
