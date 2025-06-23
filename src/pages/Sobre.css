@@ -198,17 +198,3 @@ body{
 }
 
 
-main #about-container #citacao {
-  font-size: 1.6em;
-  margin-bottom: 30px;
-  margin-top: 40px;
-}
-
-main #about-container #citacao #spancitacao {
-  display: block;  
-  margin-top: 4px;    
-  font-style: italic;
-  
-  text-align: center;
-  font-size: 0.7em;   
-}

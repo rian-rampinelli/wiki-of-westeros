@@ -1,5 +1,5 @@
 # Wiki of Westeros
-Breve fonte de informações sobre o universo de GOT.
+Breve fonte de informações sobre o universo de Game of Thrones
 
 # Participantes
 - Rian Barbosa Rampinelli Delgado(G10)
@@ -13,7 +13,7 @@ Breve fonte de informações sobre o universo de GOT.
 - react-spinners
 
 ## Sobre
-> Projeto temático de uma wiki de Game of Thrones,desenvolvido com React e Vite, utilizando diversas dependências como EmailJS para envio de e-mails. A aplicação consome APIs públicas para exibir dados de personagens, casas, livros e citações do universo GOT.
+> Projeto temático de uma wiki de Game of Thrones,desenvolvido com React e Vite, utilizando dependências como EmailJS para envio de e-mails. A aplicação consome APIs públicas para exibir dados de personagens, casas, livros e citações do universo GOT.
 
 
 ## Apis utilizadas

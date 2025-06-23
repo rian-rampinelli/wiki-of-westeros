@@ -7,8 +7,14 @@ import PageLayout from '../components/PageLayout';
 import Citacao from '../api/CitacoesApi';
 import snow from '../assets/personagens/snow.jpg';
 import tywin from '../assets/personagens/tywin.jpg';
-import ned from '../assets/personagens/ned.jpg';
 import daenerys from '../assets/personagens/daenerys.jpeg';
+import jaime from '../assets/personagens/jaime.jpg';
+import arya from '../assets/personagens/arya.jpg';
+import './Personagens.css';
+import robb from '../assets/personagens/rob-stark.jpg';
+import robert from '../assets/personagens/robert.jpg';
+import theon from '../assets/personagens/theon.jpg';
+import tyrion from '../assets/personagens/tyrion.jpg';
 import './Personagens.css';
 
 
@@ -43,10 +49,10 @@ function Personagens(){
         frase: "Nunca esqueça quem manda.",
         casa: "House Lannister"
     },
-    {   
-        img: ned,
-        nome: "Ned Stark",
-        frase: "A espada é minha sentença.",
+    {
+        img: arya,
+        nome: "Arya Stark",
+        frase: "Valar Morghulis.",
         casa: "House Stark"
     },
     {   
@@ -56,31 +62,31 @@ function Personagens(){
         casa: "House Targaryen"
     },
     {   
-        img: snow,
+        img: jaime,
         nome: "Jaime Lannister",
-        frase: "Pela mão do rei!",
+        frase: "As coisas que faço por amor",
         casa: "House Lannister"
     },
     {   
-        img: snow,
+        img: robb,
         nome: "Robb Stark",
         frase: "O Rei no Norte!",
         casa: "House Stark"
     },
     {   
-        img: snow,
+        img: robert,
         nome: "Robert Baratheon",
         frase: "Traga-me vinho!",
         casa: "House Baratheon"
     },
     {   
-        img: snow,
+        img: theon,
         nome: "Theon Greyjoy",
         frase: "O que está morto não pode morrer.",
         casa: "House Greyjoy"
     },
     {   
-        img: snow,
+        img: tyrion,
         nome: "Tyrion Lannister",
         frase: "Eu bebo e sei das coisas.",
         casa: "House Lannister"
