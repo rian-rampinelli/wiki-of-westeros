@@ -30,7 +30,7 @@ git clone https://gitlab.com/alunos-dfe/rian-projetofinal.git
 cd rian-projetofinal
 npm install
 npm run dev
-'''
+```
 
 # Informações dos JSONs
 
@@ -48,6 +48,7 @@ npm run dev
      ],
   "casas": ["House Stark of Winterfell"]
 }
+```
 
 ## Saída da API de **Casas**
 
@@ -66,6 +67,7 @@ npm run dev
   ],
   "frase" : "Hear Me Roar!"
 }
+```
 
 
 ## Saída da API de **Livros**
@@ -77,6 +79,7 @@ npm run dev
   "lancamento": "1996-08-06",
   "paginas": 694,
 }
+```
 
 ## Saída da API de **Citações**
 
@@ -86,4 +89,7 @@ npm run dev
   "sentence" : "Winter Is Coming!"
   "name" : "Eddard "Ned" Stark"
 }
+```
+
+
 
