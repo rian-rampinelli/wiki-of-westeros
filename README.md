@@ -41,10 +41,10 @@ npm run dev
   "nome": "Jon Snow",
   "nascido": "In 218 AC",
   "cultura": "Northmen",
-  "titulo": "Lord Commander of the Night\s Watch",
+  "titulo": "Lord Commander of the Nights Watch",
   "apelidos": [
      "Lord Snow",
-     "Ned Stark\s Bastard"
+     "Ned Starks Bastard"
      ],
   "casas": ["House Stark of Winterfell"]
 }
@@ -58,8 +58,8 @@ npm run dev
   "região": "The Westerlands",
   "fundacao": "Age of Heroes",
   "fundador": "Lann",
-  "emblema": A gold lion, on a crimson field(Gules, a lion or),
-  "membros_e_aliancas": [
+  "emblema": "A gold lion, on a crimson field(Gules, a lion or)",
+  "membros e aliancas": [
     "Tywin Lannister",
     "Alysanne Farman",
     "Jaime Lannister",
@@ -87,8 +87,35 @@ npm run dev
 
 {
   "sentence" : "Winter Is Coming!"
-  "name" : "Eddard "Ned" Stark"
+  "name" : "Eddard Ned Stark"
 }
+```
+
+## Estrutura De Paginas 
+```
+/src
+├── api/
+│   ├── CitacoesApi.jsx  
+│   └── PersonagensApi.jsx  
+├── assets/
+│   ├── personagens/
+│   │   ├── arya.jpg        
+│   │   └── snow.jpg
+├── components/
+│   ├── PageLayout.jsx     
+│   └── EnviarEmail.js      
+├── pages/
+│   ├── Sobre.jsx          
+│   ├── Casas.jsx      
+│   └── Livros.jsx        
+├── routes/
+│   └── AppRoutes.jsx      
+├── styles/
+│   └── styles.css
+├── utils/
+│   └── helpers.js
+├── App.jsx
+└── main.jsx
 ```
 
 
