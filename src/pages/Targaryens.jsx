@@ -58,10 +58,6 @@ function Targaryens(){
     return(
         <PageLayout>
             <main id='container-casas'>
-
-                
-                
-               
                 <section className='section-cards'>
                      <button className='voltar' onClick={() => navigate(-1)}>
                         <FaArrowLeft style={{cursor:'pointer'}} size={40}/>
