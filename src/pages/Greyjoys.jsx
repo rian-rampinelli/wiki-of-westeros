@@ -1,6 +1,7 @@
 import {useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from "react-icons/fa";
+import { MoonLoader } from 'react-spinners';
 import axios from 'axios';
 import PageLayout from '../components/PageLayout';
 import card from '../assets/casas-especificas/greyjoy.png';
@@ -14,12 +15,14 @@ function Greyjoys(){
     const[dadosFundador,setDadosFundador] = useState('')
     const[membros, setMembros] = useState([]);
     const[mostrarTudo, setMostrarTudo] = useState(false);
+    const [loading,setLoading] = useState(false)
     const navigate = useNavigate();
     
 
     useEffect(() =>{
     async function BuscarDadosCasa(){
         try{
+        setLoading(true)
         const response = await axios.get( "https://www.anapioficeandfire.com/api/houses/169")
         setDadosCasa(response.data)
         const dadosFundador = await axios.get(response.data.founder)
@@ -38,6 +41,10 @@ function Greyjoys(){
         }catch{
             alert("erro ao buscar")
             console.log('erro')
+        }finally{
+            setTimeout(() => {
+                setLoading(false)
+            }, 0.600);
         }
         }
         BuscarDadosCasa();
@@ -69,8 +76,12 @@ function Greyjoys(){
                         Historicamente, os Greyjoys participaram de várias rebeliões contra o Trono de Ferro, buscando autonomia e respeito para seu povo e suas tradições. Apesar das disputas internas e desafios políticos, eles permanecem leais entre si, unidos pelo orgulho da herança marítima e pela determinação inabalável de manter sua liberdade e cultura únicas.
                     </p>
                     <h2 className='titulo-greyjoys'>Informacoes da casa</h2>
-                    
-                        {dadosCasa && (
+                    {loading ? (
+                        <div className='loading-nomes-casas'>
+                            <MoonLoader size={50} color='#81d4fa'/>
+                        </div>
+                     ) : (
+                        dadosCasa && (
                             <div>
                                 <p><span>Nome:</span> {dadosCasa.name }</p>
                                 <p><span>Região:</span> {dadosCasa.region || "Sem regiao"}</p>
@@ -96,7 +107,7 @@ function Greyjoys(){
                                 </div>     
                                 <p className='frase-casa'>"{dadosCasa.words}"</p>
                             </div>
-                        )}
+                        ))}
                 
                 </section>
                 

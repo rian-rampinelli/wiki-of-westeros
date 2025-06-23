@@ -1,6 +1,7 @@
 import {useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from "react-icons/fa";
+import { MoonLoader } from 'react-spinners';
 import axios from 'axios';
 import PageLayout from '../components/PageLayout';
 import card from '../assets/casas-especificas/lannister.png';
@@ -12,32 +13,35 @@ function Lannisters(){
     const[dadosFundador,setDadosFundador] = useState('')
     const[membros, setMembros] = useState([]);
     const[mostrarTudo, setMostrarTudo] = useState(false);
+    const [loading,setLoading] = useState(false)
     const navigate = useNavigate();
     
 
     useEffect(() =>{
     async function BuscarDadosCasa(){
         try{
-        const response = await axios.get( "https://www.anapioficeandfire.com/api/houses/229")
-        setDadosCasa(response.data)
-        const dadosFundador = await axios.get(response.data.founder)
-        setDadosFundador(dadosFundador.data)
-        const urls = response.data.swornMembers;
-        const requisicoes = urls.map(url => axios.get(url));
-        const respostas = await Promise.all(requisicoes);
+            setLoading(true)
+            const response = await axios.get( "https://www.anapioficeandfire.com/api/houses/229")
+            setDadosCasa(response.data)
+            const dadosFundador = await axios.get(response.data.founder)
+            setDadosFundador(dadosFundador.data)
+            const urls = response.data.swornMembers;
+            const requisicoes = urls.map(url => axios.get(url));
+            const respostas = await Promise.all(requisicoes);
 
-        const nomes = respostas
-            .map(res => res.data.name)
-            .filter(nome => nome.trim() !== '');
+            const nomes = respostas
+                .map(res => res.data.name)
+                .filter(nome => nome.trim() !== '');
 
-        setMembros(nomes);
-
-        
+            setMembros(nomes);
         }catch{
             alert("erro ao buscar")
             console.log('erro')
-        }
-        }
+        }finally{
+            setTimeout(() => {
+                setLoading(false)
+            }, 0.600);
+        }}
         BuscarDadosCasa();
     },[]);
 
@@ -64,8 +68,12 @@ function Lannisters(){
                         Apesar das tensões internas e rivalidades, eles permanecem uma força a ser reconhecida em Westeros, guiados pelo orgulho, inteligência e determinação.
                     </p>
                     <h2>Informacoes da casa</h2>
-                    
-                        {dadosCasa && (
+                    {loading ? (
+                        <div className='loading-nomes-casas'>
+                            <MoonLoader size={50} color='#81d4fa'/>
+                        </div>
+                    ) : (
+                        dadosCasa && (
                             <div>
                                 <p><span>Nome:</span> {dadosCasa.name }</p>
                                 <p><span>Região:</span> {dadosCasa.region || "Sem regiao"}</p>
@@ -91,7 +99,7 @@ function Lannisters(){
                                 </div>     
                                 <p className='frase-casa'>"{dadosCasa.words}"</p>
                             </div>
-                        )}
+                        ))}
                 
                 </section>
                 

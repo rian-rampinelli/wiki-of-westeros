@@ -111,3 +111,10 @@
     font-size: 2em;
   }
 }
+.loading-nomes-casas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+}
