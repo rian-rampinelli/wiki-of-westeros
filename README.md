@@ -5,8 +5,8 @@ Breve fonte de informações sobre o universo de Game of Thrones
 - Rian Barbosa Rampinelli Delgado(G10)
 
 ## Login
--rian
--111
+- User: rian
+- Senha: 111
 
 ## Tecnologias utilizadas
 - React
