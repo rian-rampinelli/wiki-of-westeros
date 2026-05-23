@@ -58,7 +58,6 @@
 
 
 .input-login {
-
   width: 100%;
   border: none;
   background-color: rgba(200, 200, 200, 0.2);
@@ -70,11 +69,15 @@
  
 }
 
+.input-login::placeholder {
+  color: rgba(255, 255, 255, 0.301);
+}
 
+ 
 
 .input-login:focus {
   outline: none;
-  background-color: rgba(200, 200, 200, 0.4);
+ 
   color: white;
 }
 

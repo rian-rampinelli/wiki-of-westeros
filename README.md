@@ -4,6 +4,10 @@ Breve fonte de informações sobre o universo de Game of Thrones
 # Participantes
 - Rian Barbosa Rampinelli Delgado(G10)
 
+## Login
+-rian
+-111
+
 ## Tecnologias utilizadas
 - React
 - React Router DOM
