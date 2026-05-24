@@ -1,10 +1,7 @@
 # Wiki of Westeros
 Breve fonte de informações sobre o universo de Game of Thrones
 
-# Participantes
-- Rian Barbosa Rampinelli Delgado(G10)
-
-## Login
+## Informações de Login
 - User: rian
 - Senha: 111
 
@@ -12,7 +9,6 @@ Breve fonte de informações sobre o universo de Game of Thrones
 - React
 - React Router DOM
 - Axios
-- EmailJS
 - react-icons
 - react-spinners
 
@@ -30,8 +26,8 @@ Para executar o projeto no seu computador, siga os passos abaixo:
 2. Execute a seguinte ordem de comandos.
 
 ```bash
-git clone https://gitlab.com/alunos-dfe/rian-projetofinal.git
-cd rian-projetofinal
+git clone https://github.com/rian-rampinelli/wiki-of-westeros
+cd wiki-of-westeros
 npm install
 npm run dev
 ```
@@ -122,5 +118,8 @@ npm run dev
 └── main.jsx
 ```
 
+
+# Autor
+- Rian Barbosa Rampinelli Delgado
 
 
