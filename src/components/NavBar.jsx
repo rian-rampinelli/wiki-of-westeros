@@ -1,16 +1,10 @@
-import { useNavigate } from 'react-router-dom';
+
 import { Link } from 'react-router-dom'
 import { GiStoneThrone } from "react-icons/gi";
-import { MdLogout } from "react-icons/md";
+
 import './NavBar.css'
 
 function NavBar(){
-
-     
-
-    
-
-
     return(
         <header id='header'>
             <div id='header-text'>

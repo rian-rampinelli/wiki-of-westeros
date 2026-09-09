@@ -1,5 +1,5 @@
 # Wiki of Westeros
-Breve fonte de informações sobre o universo de Game of Thrones
+Um site simples com informações básicas sobre o universo de Game of Thrones, desenvolvido como projeto acadêmico.
 
 
 ## Tecnologias utilizadas

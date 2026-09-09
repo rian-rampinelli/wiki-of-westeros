@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { useState,useEffect } from "react";
 import { MoonLoader } from "react-spinners";
+import { useState } from "react";
 import axios from "axios";
 import { capitalizarNome, pegarNomeCasas, casaParaRota } from '../utils/helpers.js';
 import PageLayout from "../components/PageLayout";

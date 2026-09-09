@@ -19,6 +19,7 @@ function Greyjoys(){
     const[membros, setMembros] = useState([]);
     const[mostrarTudo, setMostrarTudo] = useState(false);
     const [loading,setLoading] = useState(false)
+     const navigate = useNavigate();
 
     useEffect(() =>{
     async function BuscarDadosCasa(){

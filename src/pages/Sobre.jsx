@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Citacao from '../api/CitacoesApi.jsx';
 import PageLayout from '../components/PageLayout.jsx';
@@ -6,15 +5,6 @@ import card5 from '../assets/sobre/card5.jpeg';
 import card2 from '../assets/sobre/card2.jpeg';
 import card4 from '../assets/sobre/card4.jpeg';
 import './Sobre.css'
-
-
-
-
-
-
-
-
-
 
 function Sobre(){
     return(
