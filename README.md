@@ -1,9 +1,6 @@
 # Wiki of Westeros
 Breve fonte de informações sobre o universo de Game of Thrones
 
-## Informações de Login
-- User: rian
-- Senha: 111
 
 ## Tecnologias utilizadas
 - React
@@ -13,7 +10,7 @@ Breve fonte de informações sobre o universo de Game of Thrones
 - react-spinners
 
 ## Sobre
-> Projeto temático de uma wiki de Game of Thrones,desenvolvido com React e Vite, utilizando dependências como EmailJS para envio de e-mails. A aplicação consome APIs públicas para exibir dados de personagens, casas, livros e citações do universo GOT.
+> Projeto temático de uma wiki de Game of Thrones,desenvolvido com React e Vite,A aplicação consome APIs públicas para exibir dados de personagens, casas, livros e citações do universo GOT.
 
 
 ## Apis utilizadas
@@ -102,8 +99,7 @@ npm run dev
 │   │   ├── arya.jpg        
 │   │   └── snow.jpg
 ├── components/
-│   ├── PageLayout.jsx     
-│   └── EnviarEmail.js      
+│   ├── PageLayout.jsx         
 ├── pages/
 │   ├── Sobre.jsx          
 │   ├── Casas.jsx      

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from "react-icons/fa";
 import { MoonLoader } from 'react-spinners';
 import axios from 'axios';
-import enviarEmail from '../components/EnviarEmail';
+
 import PageLayout from '../components/PageLayout';
 import card from '../assets/casas-especificas/targaryen.png';
 import './NomeCasas.css';
@@ -19,9 +19,6 @@ function Targaryens(){
     const [loading,setLoading] = useState(false)
     const navigate = useNavigate();
 
-    useEffect(() => {
-        enviarEmail("Targaryesn");
-      }, []);
     
 
     useEffect(() =>{

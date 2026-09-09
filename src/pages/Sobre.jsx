@@ -1,8 +1,6 @@
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import emailjs from '@emailjs/browser';
 import Citacao from '../api/CitacoesApi.jsx';
-import enviarEmail from '../components/EnviarEmail';
 import PageLayout from '../components/PageLayout.jsx';
 import card5 from '../assets/sobre/card5.jpeg';
 import card2 from '../assets/sobre/card2.jpeg';
@@ -19,58 +17,8 @@ import './Sobre.css'
 
 
 function Sobre(){
-
-    const [nome, setNome] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const [assunto, setAssunto] = useState('');
-
-    useEffect(() => {
-        enviarEmail("Sobre");
-    }, []);
-   
-
-
-    const templateParams = {
-      email: email,
-      name: nome,
-      mensagem: message,
-      assunto:assunto,
-    };
-
-    
-
-
-    function handleEmail(e){
-    e.preventDefault();
-
-    if (!nome || !email || !message || !assunto) {
-      alert('Erro ao enviar, preencha todos os campos!');
-      return;
-    }
-
-
-   
-    emailjs.send('service_95xkykl', 'template_zzsvrcc', templateParams, 'YU30LAJ_Djv-ASqLK')
-      .then(
-        (result) => {
-          alert('Email enviado!');
-          console.log(result.text);
-         
-        },
-        (error) => {
-          alert('Erro ao enviar o email!');
-          console.log(error.text);
-        }
-    )
-
-
-
-
-}
     return(
         
-            
             <PageLayout>
                 <main id='about-container'>
                     <h1>Bem vindo a westeros,uma terra de fogo e gelo!</h1>
@@ -103,43 +51,10 @@ function Sobre(){
                             </div>
                         </div>
                         </section>
-                    <h2 id='title-form'>Envie suas dúvidas, sugestões ou comentários!</h2>
-                    <form onSubmit={handleEmail} id='form-contato'>
-                        <div>
-                            <label>Nome</label>
-                            <input
-                            type="text"
-                            value={nome}
-                            onChange={(e) => setNome(e.target.value)}
-                            />
-                        </div>
-                        <div>
-                            <label>Email</label>
-                            <input type="Email"
-                             value={email}
-                            onChange={(e) => setEmail(e.target.value)} />
-                
-                
-                        </div>
-                         <div>
-                            <label>Assunto</label>
-                            <input type="text"
-                             value={assunto}
-                            onChange={(e) => setAssunto(e.target.value)} />
-                
-                        </div>
-                        <div>
-                            <label>Mensagem</label>
-                            <textarea
-                            value={message}
-                            onChange={(e) => setMessage(e.target.value)}></textarea>
-                        </div>
-                        <div className="button-sobre">
-                            <button variant="light" type="submit">
-                            Enviar
-                            </button>
-                        </div>
-                    </form>
+                    
+                   
+                    
+                   
                 
                     
                     <Citacao personagem={"ned"}/>

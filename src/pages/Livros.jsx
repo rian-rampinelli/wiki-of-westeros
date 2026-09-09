@@ -3,16 +3,14 @@ import { MoonLoader } from 'react-spinners';
 import axios from 'axios';
 import PageLayout from '../components/PageLayout';
 import Citacao from '../api/CitacoesApi';
-import enviarEmail from '../components/EnviarEmail';
+
 import './Livros.css';
 
 export default function Livros() {
     const [selecionadosLivros, setSelecionadosLivros] = useState([]);
     const [loading,setLoading] = useState(false);
 
-    useEffect(() => {
-        enviarEmail("Livros");
-    }, []);
+ 
 
     useEffect(() => {
         async function pegarLivro() {
