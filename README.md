@@ -1,6 +1,7 @@
 # Wiki of Westeros
 Um site simples com informações básicas sobre o universo de Game of Thrones, desenvolvido como projeto acadêmico.
 
+[Link](https://wiki-of-westeros.vercel.app)
 
 ## Tecnologias utilizadas
 - React
